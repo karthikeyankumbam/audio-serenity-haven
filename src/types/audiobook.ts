@@ -17,6 +17,7 @@ export interface Audiobook {
   isInWishlist?: boolean;
   isOwned?: boolean;
   progress?: number; // 0-100
+  test?:string;
 }
 
 export interface Chapter {
