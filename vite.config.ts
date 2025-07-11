@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-const repoName = "audio-serenity-haven"; // 👈 your repo name
+const repoName = "audio-serenity-haven"; //
 
 export default defineConfig(({ mode }) => ({
   base: `/${repoName}/`, // 👈 add this line
@@ -21,3 +21,4 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+// trigger redeploy
