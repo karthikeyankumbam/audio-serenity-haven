@@ -3,22 +3,19 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-const repoName = "audio-serenity-haven"; //
-
-export default defineConfig(({ mode }) => ({
-  base: `/${repoName}/`, // 👈 add this line
+export default defineConfig({
+  base: '/audio-serenity-haven/', // ✅ hardcoded base
   server: {
     host: "::",
     port: 8080,
   },
   plugins: [
     react(),
-    mode === 'development' && componentTagger(),
-  ].filter(Boolean),
+    componentTagger(), // optionally conditionally wrap this later
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
-// trigger redeploy
+});
